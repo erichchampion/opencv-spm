@@ -4,8 +4,8 @@
 import PackageDescription
 
 // Local validation build (dnn removed)
-let binaryURL = "https://github.com/erichchampion/opencv/releases/download/opencv-local/opencv2-local.zip"
-let checksum = "14e3f5b2ea6be68ac5404825e1ea9e998b6bfe15c3b2248e6e5d12ddaefc32a2"
+let binaryURL = "https://github.com/erichchampion/opencv/releases/download/opencv-local/opencv2-local-flat.zip"
+let checksum = "70378d0f84e9d417d341a673f8c68534a9270ddd5a45f88472ac3ae00e6d26e0"
 let package = Package(
     name: "OpenCV",
     platforms: [
