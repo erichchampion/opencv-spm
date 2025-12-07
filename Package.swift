@@ -3,9 +3,9 @@
 
 import PackageDescription
 
-let version = "4.12.0"
-let checksum = "13409e99956a74aaee1856c56889c211116fbc8be2bcbe373986ec9e10f536fc"
-
+// Local validation build (dnn removed)
+let binaryURL = "https://github.com/erichchampion/opencv/releases/download/opencv-local/opencv2-local.zip"
+let checksum = "14e3f5b2ea6be68ac5404825e1ea9e998b6bfe15c3b2248e6e5d12ddaefc32a2"
 let package = Package(
     name: "OpenCV",
     platforms: [
@@ -17,9 +17,11 @@ let package = Package(
             targets: ["opencv2", "opencv2-dependencies"]),
     ],
     targets: [
-        .binaryTarget(name: "opencv2",
-                      url: "https://github.com/yeatse/opencv-spm/releases/download/\(version)/opencv2.xcframework.zip",
-                      checksum: checksum),
+        .binaryTarget(
+            name: "opencv2",
+            url: binaryURL,
+            checksum: checksum
+        ),
         .target(
             name: "opencv2-dependencies",
             linkerSettings: [
